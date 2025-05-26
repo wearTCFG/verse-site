@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verse of the Day</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+    #verse {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verse of the Day</h1>
+  <div id="verse">Loading...</div>
+
+  <script>
+    const verses = {'1': 'John 3:16 - For God so loved the world that he gave his one and only Son...', '2': 'Philippians 4:13 - I can do all things through Christ who strengthens me.', '3': 'Romans 8:28 - And we know that in all things God works for the good of those who love him.', '4': 'Psalm 23:1 - The Lord is my shepherd; I shall not want.', '5': 'Proverbs 3:5 - Trust in the Lord with all your heart and lean not on your own understanding.', '6': 'Isaiah 41:10 - So do not fear, for I am with you; do not be dismayed, for I am your God.', '7': 'Matthew 6:33 - But seek first his kingdom and his righteousness, and all these things will be given to you as well.', '8': 'Jeremiah 29:11 - For I know the plans I have for you, declares the Lord...', '9': 'Hebrews 11:1 - Now faith is confidence in what we hope for and assurance about what we do not see.', '10': '1 Corinthians 13:4 - Love is patient, love is kind. It does not envy, it does not boast...', '11': '2 Corinthians 5:7 - For we walk by faith, not by sight.', '12': 'Matthew 11:28 - Come to me, all you who are weary and burdened, and I will give you rest.', '13': 'James 1:5 - If any of you lacks wisdom, you should ask God...', '14': '1 Peter 5:7 - Cast all your anxiety on him because he cares for you.', '15': 'Romans 12:2 - Do not conform to the pattern of this world...', '16': 'Galatians 5:22 - But the fruit of the Spirit is love, joy, peace, forbearance, kindness...', '17': 'Psalm 46:1 - God is our refuge and strength, an ever-present help in trouble.', '18': 'Isaiah 40:31 - But those who hope in the Lord will renew their strength...', '19': 'Colossians 3:23 - Whatever you do, work at it with all your heart...', '20': "John 14:6 - Jesus answered, 'I am the way and the truth and the life...'", '21': 'Matthew 5:16 - Let your light shine before others...', '22': 'Joshua 1:9 - Be strong and courageous. Do not be afraid...', '23': 'Ephesians 2:8 - For it is by grace you have been saved...', '24': '1 Thessalonians 5:16 - Rejoice always, pray continually...', '25': 'Hebrews 13:8 - Jesus Christ is the same yesterday and today and forever.', '26': 'Psalm 119:105 - Your word is a lamp for my feet, a light on my path.', '27': '2 Timothy 1:7 - For the Spirit God gave us does not make us timid...', '28': "Romans 10:9 - If you declare with your mouth, 'Jesus is Lord,' and believe in your heart...", '29': 'John 16:33 - In this world you will have trouble. But take heart!', '30': 'Psalm 91:1 - Whoever dwells in the shelter of the Most High will rest in the shadow of the Almighty.'};
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    document.getElementById("verse").innerText = verses[id] || "Verse not found.";
+  </script>
+</body>
+</html>
